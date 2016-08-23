@@ -1,0 +1,4 @@
+help <- Will call this command list
+ping <- Ping a specified domain name or IP address
+tracert <- Trace a specified domain name or IP address
+cpass <- Change the password of a specified account
