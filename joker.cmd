@@ -27,7 +27,7 @@ goto error
 echo.
 echo Plugins
 echo ==============
-dir /b plugins\*.cmd
+dir /b plugins\*.cmd plugins\*.bat
 echo.
 echo Enter the name of the plugin you want to run.
 set /p plugin=root/plugins/plugin_dragon.jr@Root:~$ 
