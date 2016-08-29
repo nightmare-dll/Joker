@@ -1,6 +1,11 @@
 @echo off
+
+:: Calling the config
 call "data/config.cmd"
+:: Setting Title
 title %program%#%version%
+
+:: Root "Directory"
 :root
 cls
 echo [===========================================================]
@@ -27,15 +32,17 @@ goto error
 echo.
 echo Plugins
 echo ==============
+:: Finding all files ending in .cmd or .bat
 dir /b plugins\*.cmd plugins\*.bat
 echo.
 echo Enter the name of the plugin you want to run.
 set /p plugin=root/plugins/plugin_dragon.jr@Root:~$ 
+:: Running user-specified plugin
 start "" plugins\%plugin%
 goto root
 
 :help
-start commandlist.txt
+start data/commandlist.txt
 goto root
 
 :ping

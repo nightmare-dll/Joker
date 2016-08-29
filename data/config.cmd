@@ -1,9 +1,9 @@
-REM General Config
+:: General Config
 set program=Joker
 set version=2.0
 set author=nightmare.dll
 
-REM Paths
-set programdir=../joker.cmd
+:: Paths
+set programpath=../joker.cmd
 set rootdir=../
 set plugindir=../plugins/
