@@ -37,6 +37,7 @@ dir /b plugins\*.cmd plugins\*.bat
 echo.
 echo Enter the name of the plugin you want to run.
 set /p plugin=root/plugins/plugin_dragon.jr@Root:~$ 
+if %plugin% == root goto root
 :: Running user-specified plugin
 start "" plugins\%plugin%
 goto root
@@ -49,6 +50,7 @@ goto root
 echo.
 echo Enter the website URL or IP address you want to ping.
 set /p ping=root/ping.jr@Joker:~$ 
+if %ping% == root goto root
 ping %ping%
 echo Press any key to return to root...
 pause >nul
@@ -58,6 +60,7 @@ goto root
 echo.
 echo Enter the website URL or IP address you want to trace.
 set /p tracert=root/tracert.jr@Joker:~$ 
+if %tracert% == root goto root
 tracert %tracert%
 echo Press any key to return to root...
 pause >nul
@@ -69,6 +72,7 @@ echo You must run this program as administrator to use this feature!
 echo Enter the username of the account (do ls to list all users).
 set /p username=root/cpass.jr@Joker:~$ 
 if %username% == ls goto ls
+if %username% == root goto root
 goto :cpasspassword
 :ls
 net user
